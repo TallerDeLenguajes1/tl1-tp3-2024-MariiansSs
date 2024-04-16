@@ -6,19 +6,17 @@
 int main()
 {
     char *nombres;
-    char *buff;
+    char **buff;
 
-    for (int i = 0; i < 5; i++)
-    {
-        buff= (char *) malloc(100*sizeof(char));
+    buff= (char **) malloc(100*sizeof(char*));
 
-        printf("Ingrese su nombre:\n");
-        gets(buff);
+    printf("Ingrese su nombre:\n");
+    gets(buff);    
 
-        nombres = (char *) malloc((strlen(buff)+1)*sizeof(char));
+    nombres = (char *) malloc((strlen(buff)+1)*sizeof(char));
 
-        strcpy(nombres,buff);
-    }
+    strcpy(nombres,buff);
+    
     
     
 
